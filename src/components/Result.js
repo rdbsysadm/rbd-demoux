@@ -24,14 +24,7 @@ function Result({ fields, onClickLink, title, url }) {
           )}
       </div>
 
-        <div>
-        {title &&
-          url && (
-            <img src={fields["color"]}  alt="Product Image "  />
-          )}
-        
-      </div>
-
+    
       <div className="result__body">
         <ul className="result__details">
           {Object.keys(fields).map(key => {
