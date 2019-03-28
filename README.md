@@ -1,7 +1,7 @@
 
 # rbd-demoux
 
-<p align="center"><img src="https://github.com/swiftype/app-search-reference-ui-react/blob/master/logo-app-search.png?raw=true" alt="Elastic App Search Logo"></p>
+ 
 
 <p align="center"><a href="https://circleci.com/gh/swiftype/app-search-reference-ui-react"><img src="https://circleci.com/gh/swiftype/app-search-reference-ui-react.svg?style=svg" alt="CircleCI buidl"></a>
 <a href="https://github.com/swiftype/app-search-reference-ui-react/releases"><img src="https://img.shields.io/github/release/swiftype/app-search-reference-ui-react/all.svg?style=flat-square" alt="GitHub release" /></a></p>
@@ -37,7 +37,7 @@ Run the following commands to start this application:
 # Run the `cd` command to change the current directory to the
 # location of your downloaded Reference UI. Replace the path
 # below with the actual path of your project.
-cd ~/Downloads/search-lib-reference-ui
+cd ~/Downloads/rbd-demoux
 
 # Run this to set everything up
 npm install
