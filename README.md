@@ -30,6 +30,12 @@ The README assumes that you have generated this code from within the App Search 
 
 Run the following commands to start this application:
 
+Install git  from following location
+https://git-scm.com/download/win
+
+Install Nodejs Latest version from following location
+https://nodejs.org/en/download/
+
 ```bash
 # Run the `cd` command to change the current directory to the
 # location of your downloaded Reference UI. Replace the path
