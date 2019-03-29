@@ -25,7 +25,7 @@ function SearchBox(props) {
           onChange={onChange}
           type="text"
           value={value}
-          placeholder="Hello, search your documents&#8230;"
+          placeholder="Hello, start your search here&#8230;"
           {...inputProps}
         />
         {shouldShowSuggestions && (
