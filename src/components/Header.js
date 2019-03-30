@@ -19,7 +19,7 @@ export default function Header() {
     <div className="container">
       <div className="row">
         <div className="col-xl-9 mx-auto">
-          <h1 className="mb-5">Rent Buy for youreveryday needs  </h1>
+          <h1 className="mb-5">Rent Buy for your everyday needs and donate your excess </h1>
         </div>
         <div className="col-md-10 col-lg-8 col-xl-7 mx-auto">
           
