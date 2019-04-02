@@ -1,6 +1,6 @@
 import React from "react";
-
 import { SearchBox } from "../containers";
+import companyLogo from './images/HaloLogo.png';
 
 export default function Header() {
   return (
@@ -8,6 +8,7 @@ export default function Header() {
   <div>
   <nav className="navbar navbar-light bg-light static-top">
     <div className="container">
+    <img src={companyLogo} alt="Hang Loose" />
       <span className="navbar-brand" href="">Rent Buy Donate</span>
       <a className="btn btn-primary" href="">Sign In</a>
     </div>
