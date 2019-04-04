@@ -3,12 +3,12 @@
     "engineName": "rbd-demo",
     "hostIdentifier": "host-hin6fd",
     "searchKey": "search-9esuvm1q5ta3yacsn9o8q5aj",
-    "searchFields": ["title", "description","city"],
-    "resultFields": ["id", "title", "description", "image_url", "condition","color"],
+    "searchFields": ["category", "subcategory", "title", "description","city"],
+    "resultFields": ["id", "title", "description", "image_url", "condition","color", "availablefrom", "priceperday","priceperweek","priceper4weeks"],
     "querySuggestFields": ["title"],
     "titleField": "title",
     "urlField": "product_link",
     "urlFieldTemplate": "http://www.example.com/{{id}}",
-    "sortFields": ["state", "city","available","condition"],
-    "facets": ["condition", "color","city","state"]
+    "sortFields": ["city","available","condition","priceperday"],
+    "facets": ["condition", "color","city","state","priceperday","priceperweek","priceper4weeks"]
   }
