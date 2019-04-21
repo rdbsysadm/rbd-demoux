@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 import { MDBBtn} from 'mdbreact';
+import { MDBInput } from "mdbreact";
 
 function SearchBox(props) {
   const {
@@ -22,7 +23,7 @@ function SearchBox(props) {
     >
       <div className="query-suggestions-wrapper">
         <input
-          className={`searchbox__text-input ${focusedClass}`}
+          className="form-control"       
           onChange={onChange}
           type="text"
           value={value}
