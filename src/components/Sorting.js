@@ -1,10 +1,12 @@
 import PropTypes from "prop-types";
 import React from "react";
+import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
 
 function Sorting({ onChange, options, value }) {
   return (
     <div className="sorting">
-      <select id="sorting" name="sorting" value={value} onChange={onChange}>
+
+       <select id="sorting" name="sorting" value={value} onChange={onChange}>
         {options.map(option => (
           <option key={option.value} value={option.value}>
             {option.name}

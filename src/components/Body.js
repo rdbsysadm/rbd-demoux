@@ -21,21 +21,37 @@ function Body({ hasSidebar = true }) {
           Start with searching for a product you wan to to rent, buy or donate
         </div>
         <div className="search-results">
-          <div className={"sidebar" + (hasSidebar ? '' : ' hidden')}>
-            <Sorting sortOptions={buildSortOptionsFromConfig()} />
-            <Facets />
-          </div>
+       
           <div className="app-card-list">
-            <MDBContainer>
-            <MDBRow>
-            <MDBCol size="18">
-              <div className="meta">
-                <PagingInfo />
-                <ResultsPerPage />
+            <MDBContainer fluid >
+            <MDBRow> 
+              <MDBCol md="2" sm="2"  >
+              <div class="d-none d-sm-block">
+                <Sorting sortOptions={buildSortOptionsFromConfig()} />
+                <Facets    className=".d-none" />
               </div>
               </MDBCol>
-            </MDBRow>
-              <Results />
+              
+              
+              <MDBCol  md="10">
+                <MDBRow>
+                  <MDBCol  md="12">
+                    <div className="meta">
+                      <PagingInfo />
+                      <ResultsPerPage />
+                    </div>
+                  </MDBCol>
+                </MDBRow>
+                    <MDBCol  md="12">
+                      <Results />
+                    </MDBCol>
+              </MDBCol>
+
+              
+              </MDBRow>
+              
+
+              
             </MDBContainer>
 
             <div className="results__footer">

@@ -15,8 +15,8 @@ function Result({ fields, onClickLink, title, url }) {
   });
 
   return (
-  <MDBCol style={{ maxWidth: "20rem" }}>
-   <MDBCard style={{ width: "20rem" }}>   
+  <MDBCol style={{ maxWidth: "18rem" }}>
+   <MDBCard style={{ width: "18rem" }}>   
   
     <MDBCardBody>
      <MDBCardTitle>
