@@ -42,13 +42,12 @@ class Header extends Component{
    return(          
       <div>
          <Router>
-          <MDBNavbar color="indigo" dark expand="md" fixed="top">
+          <MDBNavbar color="blue-gradient" dark expand="md" fixed="top">
+          <img src={companyLogo} alt="Hang Loose" />
           {!this.state.isWideEnough && <MDBNavbarToggler onClick={this.onClick} />}
               <MDBCollapse isOpen={this.state.collapse} navbar>
                 <MDBNavbarNav left>
-                  <MDBNavItem active>
-                    <MDBNavLink to="#">  <img src={companyLogo} alt="Hang Loose" /> </MDBNavLink>
-                  </MDBNavItem>
+       
                   <MDBNavItem>
                     <MDBNavLink to="#">    <span className="navbar-brand" href="">Rent Buy Donate</span> </MDBNavLink>
                   </MDBNavItem>
