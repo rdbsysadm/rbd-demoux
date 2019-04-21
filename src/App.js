@@ -48,6 +48,8 @@ class App extends Component {
       collapse: !this.state.collapse
     });
   }
+
+  
   render() {
     const config = getConfig();
 
