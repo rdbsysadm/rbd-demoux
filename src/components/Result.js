@@ -45,13 +45,13 @@ function Result({ fields, onClickLink, title, url }) {
             }
             else
             {
-             return <li key={key}>
-                <span className="result__key">{key}</span>{" "}
+             return <div key={key}>                
+                <span >{key}</span>{" "}
                 <span
                   className="result__value"
                   dangerouslySetInnerHTML={{ __html: fields[key] }}
                 />
-              </li>
+               </div>
             }
           })}
         </MDBCardText>
