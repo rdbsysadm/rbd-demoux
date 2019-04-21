@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 
 function Results({ children }) {
-  return <ul>{children}</ul>;
+  return  <div className="app-card-list" id="app-card-list"> {children} </div>;
 }
 
 Results.propTypes = {

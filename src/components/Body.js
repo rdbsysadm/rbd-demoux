@@ -24,7 +24,7 @@ function Body({ hasSidebar = true }) {
             <Sorting sortOptions={buildSortOptionsFromConfig()} />
             <Facets />
           </div>
-          <div className="results">
+          <div className="app-card-list">
             <div className="results__header">
               <div className="meta">
                 <PagingInfo />
