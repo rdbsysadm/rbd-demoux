@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
+import { MDBBtn} from 'mdbreact';
 
 function SearchBox(props) {
   const {
@@ -48,11 +49,12 @@ function SearchBox(props) {
           </ul>
         )}
       </div>
-      <input
-        type="submit"
-        value="Search"
-        className="button searchbox__submit"
-      />
+      <button  color="primary" btn btn-primary  outline rounded type="submit"  >
+         Search
+      </button>
+
+     
+
     </form>
   );
 }
