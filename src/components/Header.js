@@ -58,7 +58,7 @@ class Header extends Component{
                   <div className="container">                    {
                       user
                         ? <p className="text-muted white-text"  >Hello {user.displayName}    <button  className="btn btn-primary" onClick={signOut}>Sign out</button> </p>
-                        : <button className="btn btn-primary" onClick={signInWithGoogle}>Sign in with Google</button>
+                        : <button className="btn btn-info" onClick={signInWithGoogle}>Sign in with Google</button>
                     }       
                   </div>
                   </MDBNavItem>
