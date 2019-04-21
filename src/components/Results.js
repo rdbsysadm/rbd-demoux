@@ -1,8 +1,19 @@
 import PropTypes from "prop-types";
 import React from "react";
+import { MDBRow ,MDBCol} from 'mdbreact';
 
 function Results({ children }) {
-  return  <div className="app-card-list" id="app-card-list"> {children} </div>;
+  return  <MDBRow>    
+              <MDBCol  md="4" sm="4">  
+                {children} 
+              </MDBCol>    
+              <MDBCol   md="4" sm="4">  
+                {children} 
+              </MDBCol>   
+              <MDBCol  md="4" sm="4">  
+                {children} 
+              </MDBCol>   
+          </MDBRow>;
 }
 
 Results.propTypes = {

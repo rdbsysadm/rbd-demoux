@@ -1,32 +1,44 @@
 import PropTypes from "prop-types";
 import React from "react";
+import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol } from 'mdbreact';
 
 function Result({ fields, onClickLink, title, url }) {
+
+  const imageUrl =   Object.keys(  fields).map( key => {
+    if(key =="Image_url"){
+      fields[key]
+      console.log( 'log image url ' + fields[key])
+    }
+    else  {
+      "https://mdbootstrap.com/img/Photos/Others/images/43.jpg"
+    }
+  });
+
   return (
-    <li className="result">
-      <div className="result__header">
+  <MDBCol style={{ maxWidth: "20rem" }}>
+   <MDBCard style={{ width: "20rem" }}>   
+  
+    <MDBCardBody>
+     <MDBCardTitle>
+          
         {title &&
           !url && (
-            <span
-              className="result__title"
+            <span              
               dangerouslySetInnerHTML={{ __html: title }}
             />
           )}
         {title &&
           url && (
-            <a
-              className="result__title"
+            <a              
               dangerouslySetInnerHTML={{ __html: title }}
               href={url}
               onClick={onClickLink}
               target="_blank"
             />
           )}
-      </div>
+       </MDBCardTitle>
 
-    
-      <div className="result__body">
-        <ul className="result__details">
+       <MDBCardText>
           {Object.keys(fields).map(key => {
             if(key=="Image_url"){
               return <img src={fields[key] } alt="Product Image" height="150" />
@@ -42,9 +54,13 @@ function Result({ fields, onClickLink, title, url }) {
               </li>
             }
           })}
-        </ul>
-      </div>
-    </li>
+        </MDBCardText>
+        <MDBBtn href="#">Details</MDBBtn>
+        </MDBCardBody>
+      
+     </MDBCard>
+     <span> &nbsp; </span>
+  </MDBCol>
   );
 }
 

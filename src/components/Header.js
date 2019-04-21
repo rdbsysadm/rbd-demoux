@@ -5,6 +5,8 @@ import withFirebaseAuth from 'react-with-firebase-auth'
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
 import firebaseConfig from '../firebaseConfig';
+import { MDBNavbar, MDBRow, MDBCol, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBContainer, MDBMask, MDBView } from 'mdbreact';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 
 
@@ -12,7 +14,24 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 class Header extends Component{
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      collapse: false,
+      isWideEnough: false
+    };
+    this.onClick = this.onClick.bind(this);
+  }
+
+
+  onClick() {
+    this.setState({
+      collapse: !this.state.collapse
+    });
+  }
+
   render() {
+
 
     const {
       user,
@@ -22,46 +41,57 @@ class Header extends Component{
 
    return(          
       <div>
-        <nav className="navbar navbar-light bg-light static-top">
-          <div className="container">
-          <img src={companyLogo} alt="Hang Loose" />
-            <span className="navbar-brand" href="">Rent Buy Donate</span>
-            {
-                user
-                  ? <p>Hello, {user.displayName}</p>
-                  : <p>Please sign in.</p>
-              }
-
-              {
-                user
-                  ? <button  className="btn btn-primary" onClick={signOut}>Sign out</button>
-                  : <button className="btn btn-primary" onClick={signInWithGoogle}>Sign in with Google</button>
-              }
-       
-          </div>
-        </nav>
-
-        <header className="masthead text-white text-center">
-        <div className="overlay"></div>
-          <div className="container">
-            <div className="row">
-              <div className="col-xl-9 mx-auto">
-                <h1 className="mb-5">Rent Buy for your everyday needs and donate your excess </h1>
-              </div>
-              <div className="col-md-10 col-lg-8 col-xl-7 mx-auto">
-                
-                  <div className="form-row">
-                    <div className="col-12 col-md-15 mb-2 mb-md-0">
-                      <SearchBox />
-                    </div>
-                    
+         <Router>
+          <MDBNavbar color="indigo" dark expand="md" fixed="top">
+          {!this.state.isWideEnough && <MDBNavbarToggler onClick={this.onClick} />}
+              <MDBCollapse isOpen={this.state.collapse} navbar>
+                <MDBNavbarNav left>
+                  <MDBNavItem active>
+                    <MDBNavLink to="#">  <img src={companyLogo} alt="Hang Loose" /> </MDBNavLink>
+                  </MDBNavItem>
+                  <MDBNavItem>
+                    <MDBNavLink to="#">    <span className="navbar-brand" href="">Rent Buy Donate</span> </MDBNavLink>
+                  </MDBNavItem>
+                  <MDBNavItem>
+                    <MDBNavLink to="#">   <span className="navbar-brand" href="">About</span></MDBNavLink>
+                  </MDBNavItem>
+                  <MDBNavItem>
+                  <div className="container">                    {
+                      user
+                        ? <p>Hello {user.displayName}    <button  className="btn btn-primary" onClick={signOut}>Sign out</button> </p>
+                        : <button className="btn btn-primary" onClick={signInWithGoogle}>Sign in with Google</button>
+                    }       
                   </div>
+                  </MDBNavItem>
+                 
+                 
                 
-              </div>
-            </div>
-          </div>
-        </header>
-        </div>
+                  
+                </MDBNavbarNav>
+                <SearchBox />
+              </MDBCollapse>
+          
+   
+       
+        </MDBNavbar>
+
+        </Router>
+       
+        <MDBContainer>
+        <MDBRow>
+          <MDBCol size="12" sm="12" md="12" lg="12">           
+                <h1 className="mb-5">Rent Buy for your everyday needs and donate your excess </h1>
+          </MDBCol> 
+        </MDBRow>
+        <MDBRow>
+          <MDBCol size="12" sm="12" md="12" lg="12">     
+          <SearchBox />
+          </MDBCol>
+        </MDBRow>
+        </MDBContainer>
+
+     </div>   
+       
         );
   }
 

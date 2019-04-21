@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBContainer, MDBMask, MDBView } from 'mdbreact';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import { Body, Header } from "./components";
 import {
@@ -30,6 +32,22 @@ function createDriver() {
 }
 
 class App extends Component {
+  
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      collapse: false,
+      isWideEnough: false
+    };
+    this.onClick = this.onClick.bind(this);
+  }
+
+  onClick() {
+    this.setState({
+      collapse: !this.state.collapse
+    });
+  }
   render() {
     const config = getConfig();
 

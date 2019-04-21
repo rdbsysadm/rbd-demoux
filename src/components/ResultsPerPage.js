@@ -1,25 +1,29 @@
 import PropTypes from "prop-types";
 import React from "react";
+import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
 
 function ResultsPerPage({ onChange, options, value }) {
   return (
-    <div className="results-per-page">
-      <label htmlFor="results-per-page">
-        Show{" "}
-        <select
-          name="results-per-page"
-          id="results-per-page"
-          value={value}
-          onChange={onChange}
-        >
-          {options.map(option => (
-            <option key={option} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
-      </label>
-    </div>
+      <MDBDropdown size="sm">
+        <MDBDropdownToggle caret color="primary">
+          ResultsPerPage
+        </MDBDropdownToggle>
+
+          
+        <MDBDropdownMenu basic   value={value}
+          onChange={onChange}>
+
+        {options.map(option => (
+          <MDBDropdownItem key={option} value={option}>  {option}</MDBDropdownItem>
+        ))}
+        </MDBDropdownMenu>
+
+ 
+      </MDBDropdown>
+
+
+   
+
   );
 }
 

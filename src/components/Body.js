@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
+import { MDBContainer,MDBRow, MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol } from 'mdbreact';
 
 import {
   ErrorBoundary,
@@ -17,7 +18,7 @@ function Body({ hasSidebar = true }) {
     <div className="reference-ui-body">
       <ErrorBoundary>
         <div className="initial-state-message">
-          Type a search above to begin.
+          Start with searching for a product you wan to to rent, buy or donate
         </div>
         <div className="search-results">
           <div className={"sidebar" + (hasSidebar ? '' : ' hidden')}>
@@ -25,15 +26,18 @@ function Body({ hasSidebar = true }) {
             <Facets />
           </div>
           <div className="app-card-list">
-            <div className="results__header">
+            <MDBContainer>
+            <MDBRow>
+            <MDBCol size="18">
               <div className="meta">
                 <PagingInfo />
                 <ResultsPerPage />
               </div>
-            </div>
-            <div className="results__body">
+              </MDBCol>
+            </MDBRow>
               <Results />
-            </div>
+            </MDBContainer>
+
             <div className="results__footer">
               <Paging />
             </div>
