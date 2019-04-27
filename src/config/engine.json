@@ -1,8 +1,8 @@
 
 {
-    "engineName": "rbd-demo",
-    "hostIdentifier": "host-hin6fd",
-    "searchKey": "search-9esuvm1q5ta3yacsn9o8q5aj",
+    "engineName": "rbd",
+    "hostIdentifier": "host-68oevr",
+    "searchKey": "search-ogpqjtb8hbhiszppu6vamnch",
     "searchFields": ["category", "subcategory", "title", "description","city"],
     "resultFields": ["id", "title", "description", "image_url", "condition","color", "availablefrom", "priceperday","priceperweek","priceper4weeks"],
     "querySuggestFields": ["title"],
